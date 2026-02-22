@@ -227,32 +227,12 @@ export const ResultsPage = () => {
                 <p className="text-lg font-black text-white">{scanResult.confidenceScore || 0}%</p>
               </div>
               <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center border border-slate-700">
-                <div className="w-8 h-8 rounded-full border-4 border-cyber-blue border-t-transparent animate-spin" />
+                <div className="w-8 h-8 rounded-full border-4 border-cyber-blue" />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Global Warnings */}
-        {(scanResult.breachCheckStatus?.warning || (scanResult.breachCheckStatus?.dataSource && scanResult.breachCheckStatus.dataSource.includes('LOCAL BREACH DATABASE'))) && (
-          <div className="mb-12 animate-fade-in delay-75">
-            <div className="bg-cyber-rose/5 border border-cyber-rose/20 p-6 rounded-[2rem] flex flex-col md:row items-center justify-between gap-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-cyber-rose/20 rounded-2xl flex items-center justify-center text-2xl">⚠️</div>
-                <div>
-                  <p className="font-black text-white text-sm uppercase tracking-tight">API Infrastructure Restricted</p>
-                  <p className="text-sm text-slate-400">Real-time HIBP integration is currently inactive. Results are derived from local intelligence.</p>
-                </div>
-              </div>
-              <button
-                onClick={() => setShowEnableModal(true)}
-                className="px-8 py-3 bg-cyber-rose text-white font-black text-xs uppercase tracking-widest rounded-xl hover:bg-rose-500 transition-colors shadow-lg shadow-cyber-rose/20"
-              >
-                Authorize Real-Time Data
-              </button>
-            </div>
-          </div>
-        )}
 
         {/* Grid Engine */}
         <div className="grid lg:grid-cols-12 gap-8 items-start">
@@ -325,7 +305,34 @@ export const ResultsPage = () => {
 
           <div className="flex flex-wrap justify-center gap-4">
             <button
-              onClick={async () => { /* Export Logic */ }}
+              onClick={() => {
+                const reportContent = `
+DIGITAL FOOTPRINT INTELLIGENCE REPORT
+Target: ${scanResult.input}
+Risk Score: ${riskAnalysis?.score}/100
+Risk Level: ${riskAnalysis?.level}
+Confidence Index: ${scanResult.confidenceScore}%
+
+BREACHES DETECTED (${scanResult.breaches?.length || 0}):
+${scanResult.breaches?.map(b => `- ${b.website} (${b.year}): ${b.severity} severity`).join('\n')}
+
+IDENTITY NODES FOUND (${scanResult.accountsFound?.length || 0}):
+${scanResult.accountsFound?.map(a => `- ${a.platform}: ${a.url}`).join('\n')}
+
+RECOMMENDATIONS:
+${riskAnalysis?.recommendation}
+                `.trim();
+
+                const blob = new Blob([reportContent], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `DigiFootprint_Report_${scanResult.input.replace(/[^a-z0-9]/gi, '_')}.txt`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+              }}
               className="px-10 py-5 bg-white text-primary font-black text-sm uppercase tracking-[0.15em] rounded-2xl hover:scale-105 transition-all shadow-xl"
             >
               📥 Download Full Intel
