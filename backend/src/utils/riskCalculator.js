@@ -17,60 +17,51 @@ export const calculateExposureScore = (scanResult) => {
   const breaches = Array.isArray(scanResult.breaches) ? scanResult.breaches : [];
   const accounts = Array.isArray(scanResult.accountsFound) ? scanResult.accountsFound : [];
 
-  // Breach detection: +30 points per breach (critical impact)
+  // 1. Breach exposure (Capped impact)
   const breachCount = breaches.length || 0;
-  score += breachCount * 25; // Adjusted weight
   if (breachCount > 0) {
-    factors.push(`${breachCount} data breach(es) detected - Critical privacy risk`);
+    score += 15; // Base risk for any breach
+    score += Math.min(breachCount * 5, 25); // Gradual increase capped at +25
+    factors.push(`${breachCount} data breach(es) detected`);
   }
 
-  // Severe breaches: +20 bonus if any breach is marked as verified
+  // 2. Verified severe data (Capped impact)
   const severeBreaches = breaches.filter(b => b && b.isVerified)?.length || 0;
   if (severeBreaches > 0) {
-    score += severeBreaches * 15;
+    score += Math.min(severeBreaches * 10, 20); // Bonus for verified data capped at +20
     factors.push(`${severeBreaches} verified breach(es) with confirmed data exposure`);
   }
 
-  // Accounts found: +15 points per account (increased due to real data)
+  // 3. Digital footprint (Logarithmic-style scaling)
   const accountCount = accounts.length || 0;
-  score += accountCount * 12;
   if (accountCount > 0) {
+    score += Math.min(accountCount * 2, 15); // Footprint points capped at +15
     factors.push(`${accountCount} linked public profile(s) discovered`);
   }
 
-  // Phone exposed in breaches: +25 points
+  // 4. Critical identity links (Static weights)
   if (scanResult.phoneExposed === true) {
-    score += 30;
+    score += 10;
     factors.push('Phone number identified in compromised datasets');
   }
 
-  // Email exposed in breaches: +20 points
   if (scanResult.emailExposed === true) {
-    score += 20;
+    score += 5;
     factors.push('Email address identified in compromised datasets');
   }
 
-  // Reused username across multiple platforms: +20 points
   if (scanResult.reusedUsername === true && accounts.length > 2) {
-    score += 25;
-    factors.push('High identity linkage risk: Identical username across multiple services');
+    score += 5;
+    factors.push('Identity linkage: Similar username across multiple services');
   }
 
-  // Public visibility per platform: +5 per platform
-  if (accounts.length > 5) {
-    const publicCount = Math.min(accounts.length - 5, 10);
-    score += publicCount * 8;
-    factors.push('Extended digital footprint: Multiple active public profiles');
-  }
-
-  // Gravatar presence
   if (scanResult.gravatarFound) {
-    score += 10;
-    factors.push('Public Gravatar profile detected (confirms active email usage)');
+    score += 5;
+    factors.push('Public Gravatar profile detected');
   }
 
-  // Normalize score to 0-100
-  const normalizedScore = Math.min(Math.round(score), 100);
+  // Normalize score to 0-100 (Now harder to hit 100)
+  const normalizedScore = Math.min(Math.max(Math.round(score), 0), 100);
 
   return {
     score: normalizedScore,

@@ -1,5 +1,627 @@
 [
   {
+    "id": 1771867329413,
+    "createdAt": "2026-02-23T17:22:09.413Z",
+    "scan": {
+      "input": "patelaryan9711@gmail.com",
+      "username": "patelaryan9711",
+      "breaches": [
+        {
+          "website": "Twitch",
+          "year": 2021,
+          "dataLeaked": [
+            "email",
+            "password",
+            "oauth"
+          ],
+          "severity": "high",
+          "affectedCount": 5600000
+        },
+        {
+          "website": "Pinterest",
+          "year": 2023,
+          "dataLeaked": [
+            "email",
+            "username"
+          ],
+          "severity": "high",
+          "affectedCount": 3000000
+        },
+        {
+          "website": "Instagram",
+          "year": 2021,
+          "dataLeaked": [
+            "email",
+            "phone"
+          ],
+          "severity": "critical",
+          "affectedCount": 49000000
+        }
+      ],
+      "breachCheckStatus": {
+        "hasRealData": true,
+        "isRealTime": false,
+        "dataSource": "Proprietary OSINT Intelligence Core",
+        "warning": null,
+        "instructions": {
+          "title": "Enable Real Breach Detection (optional)",
+          "steps": [
+            "1. Obtain a HIBP API key at https://haveibeenpwned.com/API/v3",
+            "2. Add to backend/.env: HIBP_API_KEY=your_key_here",
+            "3. Restart the backend to enable real-time breach checks"
+          ]
+        }
+      },
+      "accountsFound": [
+        {
+          "platform": "Instagram",
+          "url": "https://instagram.com/patelaryan9711",
+          "icon": "📷",
+          "status": "found"
+        },
+        {
+          "platform": "Pinterest",
+          "url": "https://pinterest.com/patelaryan9711",
+          "icon": "📌",
+          "status": "found"
+        },
+        {
+          "platform": "Twitch",
+          "url": "https://twitch.tv/patelaryan9711",
+          "icon": "🎮",
+          "status": "found"
+        }
+      ],
+      "gravatarFound": false,
+      "confidenceScore": 60,
+      "confidenceDetails": {
+        "platformsFound": 3,
+        "gravatar": false
+      },
+      "emailExposed": true,
+      "phoneExposed": true,
+      "reusedUsername": true,
+      "publicVisibility": 0,
+      "timestamp": "2026-02-23T17:22:09.411Z",
+      "dataSource": "Platform APIs only"
+    }
+  },
+  {
+    "id": 1771867193150,
+    "createdAt": "2026-02-23T17:19:53.150Z",
+    "scan": {
+      "input": "sant7124@gmail.com",
+      "username": "sant7124",
+      "breaches": [
+        {
+          "website": "Twitch",
+          "year": 2021,
+          "dataLeaked": [
+            "email",
+            "password",
+            "oauth"
+          ],
+          "severity": "high",
+          "affectedCount": 5600000
+        },
+        {
+          "website": "Pinterest",
+          "year": 2023,
+          "dataLeaked": [
+            "email",
+            "username"
+          ],
+          "severity": "high",
+          "affectedCount": 3000000
+        },
+        {
+          "website": "GitHub",
+          "year": 2020,
+          "dataLeaked": [
+            "email",
+            "token"
+          ],
+          "severity": "high",
+          "affectedCount": 1000000
+        },
+        {
+          "website": "Instagram",
+          "year": 2021,
+          "dataLeaked": [
+            "email",
+            "phone"
+          ],
+          "severity": "critical",
+          "affectedCount": 49000000
+        }
+      ],
+      "breachCheckStatus": {
+        "hasRealData": true,
+        "isRealTime": false,
+        "dataSource": "Proprietary OSINT Intelligence Core",
+        "warning": null,
+        "instructions": {
+          "title": "Enable Real Breach Detection (optional)",
+          "steps": [
+            "1. Obtain a HIBP API key at https://haveibeenpwned.com/API/v3",
+            "2. Add to backend/.env: HIBP_API_KEY=your_key_here",
+            "3. Restart the backend to enable real-time breach checks"
+          ]
+        }
+      },
+      "accountsFound": [
+        {
+          "platform": "GitHub",
+          "url": "https://github.com/sant7124",
+          "icon": "🐙",
+          "status": "found"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://instagram.com/sant7124",
+          "icon": "📷",
+          "status": "found"
+        },
+        {
+          "platform": "Pinterest",
+          "url": "https://pinterest.com/sant7124",
+          "icon": "📌",
+          "status": "found"
+        },
+        {
+          "platform": "Twitch",
+          "url": "https://twitch.tv/sant7124",
+          "icon": "🎮",
+          "status": "found"
+        },
+        {
+          "platform": "Snapchat",
+          "url": "https://www.snapchat.com/add/sant7124",
+          "icon": "👻",
+          "status": "found"
+        }
+      ],
+      "gravatarFound": false,
+      "confidenceScore": 80,
+      "confidenceDetails": {
+        "platformsFound": 5,
+        "gravatar": false
+      },
+      "emailExposed": true,
+      "phoneExposed": true,
+      "reusedUsername": true,
+      "publicVisibility": 0,
+      "timestamp": "2026-02-23T17:19:53.144Z",
+      "dataSource": "Platform APIs only"
+    }
+  },
+  {
+    "id": 1771863942264,
+    "createdAt": "2026-02-23T16:25:42.264Z",
+    "scan": {
+      "input": "bazarayadav@gmail.com",
+      "username": "bazarayadav",
+      "breaches": [
+        {
+          "website": "Twitch",
+          "year": 2021,
+          "dataLeaked": [
+            "email",
+            "password",
+            "oauth"
+          ],
+          "severity": "high",
+          "affectedCount": 5600000
+        },
+        {
+          "website": "Pinterest",
+          "year": 2023,
+          "dataLeaked": [
+            "email",
+            "username"
+          ],
+          "severity": "high",
+          "affectedCount": 3000000
+        },
+        {
+          "website": "Instagram",
+          "year": 2021,
+          "dataLeaked": [
+            "email",
+            "phone"
+          ],
+          "severity": "critical",
+          "affectedCount": 49000000
+        }
+      ],
+      "breachCheckStatus": {
+        "hasRealData": true,
+        "isRealTime": false,
+        "dataSource": "LOCAL BREACH DATABASE (fallback)",
+        "warning": null,
+        "instructions": {
+          "title": "Enable Real Breach Detection (optional)",
+          "steps": [
+            "1. Obtain a HIBP API key at https://haveibeenpwned.com/API/v3",
+            "2. Add to backend/.env: HIBP_API_KEY=your_key_here",
+            "3. Restart the backend to enable real-time breach checks"
+          ]
+        }
+      },
+      "accountsFound": [
+        {
+          "platform": "Instagram",
+          "url": "https://instagram.com/bazarayadav",
+          "icon": "📷",
+          "status": "found"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://youtube.com/bazarayadav",
+          "icon": "📺",
+          "status": "found"
+        },
+        {
+          "platform": "Pinterest",
+          "url": "https://pinterest.com/bazarayadav",
+          "icon": "📌",
+          "status": "found"
+        },
+        {
+          "platform": "Twitch",
+          "url": "https://twitch.tv/bazarayadav",
+          "icon": "🎮",
+          "status": "found"
+        },
+        {
+          "platform": "Snapchat",
+          "url": "https://www.snapchat.com/add/bazarayadav",
+          "icon": "👻",
+          "status": "found"
+        }
+      ],
+      "gravatarFound": false,
+      "confidenceScore": 80,
+      "confidenceDetails": {
+        "platformsFound": 5,
+        "gravatar": false
+      },
+      "emailExposed": true,
+      "phoneExposed": true,
+      "reusedUsername": true,
+      "publicVisibility": 0,
+      "timestamp": "2026-02-23T16:25:42.262Z",
+      "dataSource": "Platform APIs only"
+    }
+  },
+  {
+    "id": 1771863882979,
+    "createdAt": "2026-02-23T16:24:42.979Z",
+    "scan": {
+      "input": "sant7124@gmail.com",
+      "username": "sant7124",
+      "breaches": [
+        {
+          "website": "Twitch",
+          "year": 2021,
+          "dataLeaked": [
+            "email",
+            "password",
+            "oauth"
+          ],
+          "severity": "high",
+          "affectedCount": 5600000
+        },
+        {
+          "website": "Pinterest",
+          "year": 2023,
+          "dataLeaked": [
+            "email",
+            "username"
+          ],
+          "severity": "high",
+          "affectedCount": 3000000
+        },
+        {
+          "website": "GitHub",
+          "year": 2020,
+          "dataLeaked": [
+            "email",
+            "token"
+          ],
+          "severity": "high",
+          "affectedCount": 1000000
+        },
+        {
+          "website": "Instagram",
+          "year": 2021,
+          "dataLeaked": [
+            "email",
+            "phone"
+          ],
+          "severity": "critical",
+          "affectedCount": 49000000
+        }
+      ],
+      "breachCheckStatus": {
+        "hasRealData": true,
+        "isRealTime": false,
+        "dataSource": "LOCAL BREACH DATABASE (fallback)",
+        "warning": null,
+        "instructions": {
+          "title": "Enable Real Breach Detection (optional)",
+          "steps": [
+            "1. Obtain a HIBP API key at https://haveibeenpwned.com/API/v3",
+            "2. Add to backend/.env: HIBP_API_KEY=your_key_here",
+            "3. Restart the backend to enable real-time breach checks"
+          ]
+        }
+      },
+      "accountsFound": [
+        {
+          "platform": "GitHub",
+          "url": "https://github.com/sant7124",
+          "icon": "🐙",
+          "status": "found"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://instagram.com/sant7124",
+          "icon": "📷",
+          "status": "found"
+        },
+        {
+          "platform": "Pinterest",
+          "url": "https://pinterest.com/sant7124",
+          "icon": "📌",
+          "status": "found"
+        },
+        {
+          "platform": "Twitch",
+          "url": "https://twitch.tv/sant7124",
+          "icon": "🎮",
+          "status": "found"
+        },
+        {
+          "platform": "Snapchat",
+          "url": "https://www.snapchat.com/add/sant7124",
+          "icon": "👻",
+          "status": "found"
+        }
+      ],
+      "gravatarFound": false,
+      "confidenceScore": 80,
+      "confidenceDetails": {
+        "platformsFound": 5,
+        "gravatar": false
+      },
+      "emailExposed": true,
+      "phoneExposed": true,
+      "reusedUsername": true,
+      "publicVisibility": 0,
+      "timestamp": "2026-02-23T16:24:42.975Z",
+      "dataSource": "Platform APIs only"
+    }
+  },
+  {
+    "id": 1771861933803,
+    "createdAt": "2026-02-23T15:52:13.803Z",
+    "scan": {
+      "input": "sant7124@gmail.com",
+      "username": "sant7124",
+      "breaches": [
+        {
+          "website": "Twitch",
+          "year": 2021,
+          "dataLeaked": [
+            "email",
+            "password",
+            "oauth"
+          ],
+          "severity": "high",
+          "affectedCount": 5600000
+        },
+        {
+          "website": "Pinterest",
+          "year": 2023,
+          "dataLeaked": [
+            "email",
+            "username"
+          ],
+          "severity": "high",
+          "affectedCount": 3000000
+        },
+        {
+          "website": "GitHub",
+          "year": 2020,
+          "dataLeaked": [
+            "email",
+            "token"
+          ],
+          "severity": "high",
+          "affectedCount": 1000000
+        },
+        {
+          "website": "Instagram",
+          "year": 2021,
+          "dataLeaked": [
+            "email",
+            "phone"
+          ],
+          "severity": "critical",
+          "affectedCount": 49000000
+        }
+      ],
+      "breachCheckStatus": {
+        "hasRealData": true,
+        "isRealTime": false,
+        "dataSource": "LOCAL BREACH DATABASE (fallback)",
+        "warning": null,
+        "instructions": {
+          "title": "Enable Real Breach Detection (optional)",
+          "steps": [
+            "1. Obtain a HIBP API key at https://haveibeenpwned.com/API/v3",
+            "2. Add to backend/.env: HIBP_API_KEY=your_key_here",
+            "3. Restart the backend to enable real-time breach checks"
+          ]
+        }
+      },
+      "accountsFound": [
+        {
+          "platform": "GitHub",
+          "url": "https://github.com/sant7124",
+          "icon": "🐙",
+          "status": "found"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://instagram.com/sant7124",
+          "icon": "📷",
+          "status": "found"
+        },
+        {
+          "platform": "Pinterest",
+          "url": "https://pinterest.com/sant7124",
+          "icon": "📌",
+          "status": "found"
+        },
+        {
+          "platform": "Twitch",
+          "url": "https://twitch.tv/sant7124",
+          "icon": "🎮",
+          "status": "found"
+        },
+        {
+          "platform": "Snapchat",
+          "url": "https://www.snapchat.com/add/sant7124",
+          "icon": "👻",
+          "status": "found"
+        }
+      ],
+      "gravatarFound": false,
+      "confidenceScore": 80,
+      "confidenceDetails": {
+        "platformsFound": 5,
+        "gravatar": false
+      },
+      "emailExposed": true,
+      "phoneExposed": true,
+      "reusedUsername": true,
+      "publicVisibility": 0,
+      "timestamp": "2026-02-23T15:52:13.801Z",
+      "dataSource": "Platform APIs only"
+    }
+  },
+  {
+    "id": 1771861575978,
+    "createdAt": "2026-02-23T15:46:15.978Z",
+    "scan": {
+      "input": "sant7124@gmail.com",
+      "username": "sant7124",
+      "breaches": [
+        {
+          "website": "Twitch",
+          "year": 2021,
+          "dataLeaked": [
+            "email",
+            "password",
+            "oauth"
+          ],
+          "severity": "high",
+          "affectedCount": 5600000
+        },
+        {
+          "website": "Pinterest",
+          "year": 2023,
+          "dataLeaked": [
+            "email",
+            "username"
+          ],
+          "severity": "high",
+          "affectedCount": 3000000
+        },
+        {
+          "website": "GitHub",
+          "year": 2020,
+          "dataLeaked": [
+            "email",
+            "token"
+          ],
+          "severity": "high",
+          "affectedCount": 1000000
+        },
+        {
+          "website": "Instagram",
+          "year": 2021,
+          "dataLeaked": [
+            "email",
+            "phone"
+          ],
+          "severity": "critical",
+          "affectedCount": 49000000
+        }
+      ],
+      "breachCheckStatus": {
+        "hasRealData": true,
+        "isRealTime": false,
+        "dataSource": "LOCAL BREACH DATABASE (fallback)",
+        "warning": null,
+        "instructions": {
+          "title": "Enable Real Breach Detection (optional)",
+          "steps": [
+            "1. Obtain a HIBP API key at https://haveibeenpwned.com/API/v3",
+            "2. Add to backend/.env: HIBP_API_KEY=your_key_here",
+            "3. Restart the backend to enable real-time breach checks"
+          ]
+        }
+      },
+      "accountsFound": [
+        {
+          "platform": "GitHub",
+          "url": "https://github.com/sant7124",
+          "icon": "🐙",
+          "status": "found"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://instagram.com/sant7124",
+          "icon": "📷",
+          "status": "found"
+        },
+        {
+          "platform": "Pinterest",
+          "url": "https://pinterest.com/sant7124",
+          "icon": "📌",
+          "status": "found"
+        },
+        {
+          "platform": "Twitch",
+          "url": "https://twitch.tv/sant7124",
+          "icon": "🎮",
+          "status": "found"
+        },
+        {
+          "platform": "Snapchat",
+          "url": "https://www.snapchat.com/add/sant7124",
+          "icon": "👻",
+          "status": "found"
+        }
+      ],
+      "gravatarFound": false,
+      "confidenceScore": 80,
+      "confidenceDetails": {
+        "platformsFound": 5,
+        "gravatar": false
+      },
+      "emailExposed": true,
+      "phoneExposed": true,
+      "reusedUsername": true,
+      "publicVisibility": 0,
+      "timestamp": "2026-02-23T15:46:15.974Z",
+      "dataSource": "Platform APIs only"
+    }
+  },
+  {
     "id": 1771745246410,
     "createdAt": "2026-02-22T07:27:26.410Z",
     "scan": {

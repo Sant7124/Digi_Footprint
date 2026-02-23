@@ -42,8 +42,8 @@ app.use('/api/', limiter);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
-  res.json({ 
-    status: 'Server is running', 
+  res.json({
+    status: 'Server is running',
     timestamp: new Date(),
     environment: process.env.NODE_ENV,
     version: '1.0.0'
@@ -51,13 +51,17 @@ app.get('/api/health', (req, res) => {
 });
 
 // API Routes
+app.get('/', (req, res) => {
+  res.send('<h1>🔐 DigitalFootprint API is Running</h1><p>Please visit the frontend at <a href="http://localhost:5173">http://localhost:5173</a> to use the scanner.</p>');
+});
+
 app.use('/api/scan', scanRoutes);
 app.use('/api/analysis', analysisRoutes);
 app.use('/api/admin', adminRoutes);
 
 // 404 handling
 app.use((req, res) => {
-  res.status(404).json({ 
+  res.status(404).json({
     error: 'Route not found',
     path: req.path,
     method: req.method
@@ -67,15 +71,15 @@ app.use((req, res) => {
 // Global error handling middleware
 app.use((err, req, res, next) => {
   console.error('Error:', err);
-  
+
   if (err.status === 429) {
-    return res.status(429).json({ 
+    return res.status(429).json({
       error: 'Too many requests. Please try again later.',
       retryAfter: err.retryAfter
     });
   }
 
-  res.status(err.status || 500).json({ 
+  res.status(err.status || 500).json({
     error: err.message || 'Internal server error',
     ...(process.env.NODE_ENV === 'development' && { stack: err.stack })
   });
