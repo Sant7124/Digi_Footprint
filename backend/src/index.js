@@ -52,7 +52,7 @@ app.get('/api/health', (req, res) => {
 
 // API Routes
 app.get('/', (req, res) => {
-  res.send('<h1>🔐 DigitalFootprint API is Running</h1><p>Please visit the frontend at <a href="http://localhost:5173">http://localhost:5173</a> to use the scanner.</p>');
+  res.send('<h1>🔐 DigitalFootprint API is running in production.</h1>');
 });
 
 app.use('/api/scan', scanRoutes);
