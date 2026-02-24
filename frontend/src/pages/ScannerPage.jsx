@@ -43,7 +43,7 @@ export const ScannerPage = () => {
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight">
-            Privacy <span className="text-cyber-blue">Probe</span>
+            Privacy <span className="text-teal-400">Probe</span>
           </h1>
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
             Initialize a deep-pulse scan of your digital footprint. Our engine will cross-reference

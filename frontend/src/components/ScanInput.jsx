@@ -60,8 +60,8 @@ export const ScanInput = ({ onScan, isLoading: externalLoading }) => {
                 type="button"
                 onClick={() => setScanType(type)}
                 className={`flex-1 py-3 px-4 rounded-xl font-black text-xs uppercase tracking-widest transition-all duration-300 ${scanType === type
-                    ? 'bg-cyber-blue text-primary shadow-lg shadow-cyber-blue/20'
-                    : 'text-slate-500 hover:text-slate-300 hover:bg-slate-800/50'
+                  ? 'bg-cyber-blue text-primary shadow-lg shadow-cyber-blue/20'
+                  : 'text-slate-500 hover:text-slate-300 hover:bg-slate-800/50'
                   }`}
               >
                 {type}
@@ -105,8 +105,8 @@ export const ScanInput = ({ onScan, isLoading: externalLoading }) => {
             type="submit"
             disabled={externalLoading || loading}
             className={`w-full group relative py-5 px-8 rounded-2xl font-black text-xl uppercase tracking-widest transition-all duration-300 overflow-hidden ${(externalLoading || loading)
-                ? 'bg-slate-800 cursor-not-allowed text-slate-600'
-                : 'bg-white text-primary hover:scale-[1.02] active:scale-[0.98] shadow-2xl shadow-white/10'
+              ? 'bg-slate-800 cursor-not-allowed text-slate-600'
+              : 'bg-white text-primary hover:scale-[1.02] active:scale-[0.98] shadow-2xl shadow-white/10'
               }`}
           >
             <div className="relative z-10 flex items-center justify-center gap-3">

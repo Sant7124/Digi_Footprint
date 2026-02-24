@@ -76,7 +76,7 @@ export const AdminPage = () => {
         <div className="bg-slate-800 rounded-2xl p-8 border-2 border-slate-700 mb-8">
           <h2 className="text-2xl font-bold text-white mb-4">🔑 HIBP API Key</h2>
           <p className="text-slate-400 mb-4">Current status: <span className={hibpKey === '(not set)' ? 'text-red-400' : 'text-green-400'}>{hibpKey === '(not set)' ? 'Not configured' : '✓ Set'}</span></p>
-          
+
           <div className="space-y-4">
             <div>
               <label className="block text-slate-300 text-sm mb-2">Paste New HIBP API Key</label>

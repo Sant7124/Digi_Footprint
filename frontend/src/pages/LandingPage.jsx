@@ -19,7 +19,7 @@ export const LandingPage = () => {
               <span className="text-xl">🔐</span>
             </div>
             <h1 className="text-2xl font-black tracking-tighter text-white">
-              DIGI<span className="text-cyber-blue">FOOTPRINT</span>
+              DIGI_<span className="text-green-400">FOOTPRINT</span>
             </h1>
           </div>
           <button
@@ -56,7 +56,15 @@ export const LandingPage = () => {
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
           <button
             onClick={() => navigate('/scanner')}
-            className="px-10 py-5 bg-cyber-blue text-primary font-black text-lg rounded-2xl hover:bg-cyber-cyan transition-all duration-300 shadow-xl shadow-cyber-blue/20 hover:scale-105 active:scale-95"
+            className="px-10 py-5 
+            bg-gradient-to-br from-[#5EE7DF] to-[#66DDAA]
+            text-slate-900 font-extrabold text-lg
+            rounded-2xl
+            backdrop-blur-md
+            transition-all duration-300
+            shadow-[0_10px_30px_rgba(80,255,200,0.35)]
+            hover:shadow-[0_15px_40px_rgba(80,255,200,0.55)]
+            hover:scale-105 active:scale-95"
           >
             🔍 Start Deep Scan
           </button>
@@ -146,7 +154,7 @@ export const LandingPage = () => {
           <div>
             <h3 className="text-4xl font-black text-white mb-8 leading-tight">
               Why Your Digital <br />
-              <span className="text-cyber-blue">Footprint Matters</span>
+              <span className="text-teal-400">Footprint Matters</span>
             </h3>
             <div className="space-y-8">
               {[
@@ -187,14 +195,21 @@ export const LandingPage = () => {
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center relative">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyber-blue/20 rounded-full blur-[120px] pointer-events-none" />
         <h2 className="text-5xl font-black text-white mb-6 tracking-tight">
-          Ready to See the <span className="text-cyber-blue">Truth</span>?
+          Ready to See the <span className="text-teal-400">Truth</span>?
         </h2>
         <p className="text-xl text-slate-400 mb-12">
           It takes 10 seconds to find what's out there. No account needed.
         </p>
         <button
           onClick={() => navigate('/scanner')}
-          className="px-12 py-6 bg-gradient-to-r from-cyber-blue to-cyber-cyan text-primary font-black text-2xl rounded-2xl hover:scale-105 transition-all duration-300 shadow-2xl shadow-cyber-blue/40"
+          className="px-12 py-6
+           bg-gradient-to-r from-[#5EE7DF] via-[#66DDAA] to-[#7CF7D4]
+           text-slate-900 font-black text-2xl
+           rounded-2xl
+           transition-all duration-300
+           shadow-[0_10px_28px_rgba(80,255,200,0.28)]
+           hover:shadow-[0_14px_38px_rgba(80,255,200,0.45)]
+           hover:scale-105"
         >
           ✨ Initialize Scan
         </button>
@@ -207,7 +222,7 @@ export const LandingPage = () => {
             <div className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center text-sm">
               <span>🔐</span>
             </div>
-            <span className="font-black text-white tracking-tighter">DIGIFOOTPRINT</span>
+            <span className="font-black text-green-400 tracking-tighter">DIGI_FOOTPRINT</span>
           </div>
           <p className="text-slate-500 text-sm max-w-md text-center">
             Open-source privacy tool. We never store search data.

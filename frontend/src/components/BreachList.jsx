@@ -7,23 +7,22 @@ export const BreachCard = ({ breach, index }) => {
     'critical': 'bg-red-900/40 border-red-600',
     'high': 'bg-orange-600/40 border-orange-500',
     'medium': 'bg-yellow-600/40 border-yellow-500',
-    'low': 'bg-blue-600/40 border-blue-500'
+    'low': 'bg-amber-600/40 border-amber-500'
   };
 
   const severityBadge = {
     'critical': 'bg-red-600 text-white',
     'high': 'bg-orange-500 text-white',
     'medium': 'bg-yellow-500 text-white',
-    'low': 'bg-blue-500 text-white'
+    'low': 'bg-amber-500 text-white'
   };
 
   return (
     <div
-      className={`breach-card border-2 rounded-lg p-5 cursor-pointer transition-all ${
-        expanded
-          ? severityColor[breach.severity] + ' ring-2 ring-offset-2 ring-offset-slate-800'
-          : 'bg-slate-700 border-slate-600 hover:border-slate-500'
-      }`}
+      className={`breach-card border-2 rounded-lg p-5 cursor-pointer transition-all ${expanded
+        ? severityColor[breach.severity] + ' ring-2 ring-offset-2 ring-offset-slate-800'
+        : 'bg-slate-700 border-slate-600 hover:border-slate-500'
+        }`}
       onClick={() => setExpanded(!expanded)}
     >
       <div className="flex items-start justify-between">
@@ -81,7 +80,7 @@ export const BreachList = ({ breaches, onTimeline }) => {
         {breaches.length > 0 && (
           <button
             onClick={onTimeline}
-            className="px-4 py-2 bg-cyan-600/30 hover:bg-cyan-600/50 border border-cyan-500 rounded-lg text-cyan-300 font-semibold transition-all"
+            className="px-4 py-2 bg-amber-600/30 hover:bg-amber-600/50 border border-amber-500 rounded-lg text-amber-300 font-semibold transition-all"
           >
             📊 View Timeline
           </button>

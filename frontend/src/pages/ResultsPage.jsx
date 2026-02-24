@@ -194,7 +194,7 @@ export const ResultsPage = () => {
           <div className="hidden md:flex items-center gap-10">
             <div className="text-center">
               <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-1">Target Identity</p>
-              <p className="text-white font-black truncate max-w-xs text-sm">{scanResult.input}</p>
+              <p className="text-green-400 font-black truncate max-w-xs text-sm">{scanResult.input}</p>
             </div>
           </div>
 
@@ -217,7 +217,7 @@ export const ResultsPage = () => {
               <div className="inline-block px-3 py-1 bg-cyber-blue/10 border border-cyber-blue/20 rounded-full text-[10px] font-black text-cyber-blue uppercase tracking-widest mb-4">
                 Classified: Intelligence Report
               </div>
-              <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-2">Exposure <span className="text-cyber-blue">Matrix</span></h1>
+              <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-2">Exposure <span className="text-teal-400">Matrix</span></h1>
               <p className="text-slate-400 font-medium">Detailed protocol for <span className="text-white font-bold">{scanResult.input}</span></p>
             </div>
 
@@ -289,7 +289,7 @@ export const ResultsPage = () => {
 
             {suggestions && (
               <div className="bg-gradient-to-br from-secondary to-primary border border-slate-700/50 rounded-[2rem] p-8 shadow-2xl">
-                <h3 className="text-sm font-black text-cyber-blue uppercase tracking-widest mb-6">Recovery Protocols</h3>
+                <h3 className="text-sm font-black text-teal-400 uppercase tracking-widest mb-6">Recovery Protocols</h3>
                 <FixSuggestions
                   urgent={suggestions.urgent}
                   recommended={suggestions.recommended}
