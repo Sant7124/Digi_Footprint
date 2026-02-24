@@ -17,6 +17,18 @@ app.use(cors({
   credentials: true
 }));
 
+// Security headers (Production protection)
+app.set('trust proxy', 1);
+
+app.use((req, res, next) => {
+  res.setHeader("X-Powered-By", "DigitalFootprint");
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("X-Frame-Options", "DENY");
+  res.setHeader("X-XSS-Protection", "1; mode=block");
+  res.setHeader("Referrer-Policy", "no-referrer");
+  next();
+});
+
 // Body parser middleware
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
